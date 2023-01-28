@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background-color: #0F4044;
+  flex-direction: column;
+}
+
+.card {
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 600px;
+  border-radius: 9px;
+  backdrop-filter: blur(5px);
+  background-image: linear-gradient(120deg,
+      hsl(0deg 0% 89%) 0%,
+      hsl(207deg 5% 81%) 3%,
+      hsl(207deg 8% 74%) 7%,
+      hsl(207deg 9% 67%) 11%,
+      hsl(207deg 9% 59%) 15%,
+      hsl(206deg 10% 52%) 21%,
+      hsl(206deg 12% 45%) 30%,
+      hsl(206deg 17% 38%) 46%,
+      hsl(205deg 23% 32%) 70%,
+      hsl(204deg 34% 25%) 100%);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* ========== TOP style START ============ */
+.top {
+  flex-direction: column;
+  width: 100%;
+}
+
+.top .day {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.top .current {
+  width: 100%;
+  padding-top: 1rem;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.top .current .degree {
+  font-size: 8rem;
+  color: #fff;
+  position: relative;
+  font-weight: 500;
+}
+
+.top .current .degree span {
+  position: absolute;
+  top: 10px;
+  right: 1;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.top .current .currentIcon {
+  flex-direction: column;
+  gap: 5px;
+}
+
+.top .current .currentIcon img {
+  width: 120px;
+}
+
+.top .current .currentIcon p {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.top .currentData {
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+
+.top .currentData div {
+  gap: 3px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.top .currentData div svg {
+  font-size: 2rem;
+}
+
+/* ====X===== TOP style END =====X====== */
+
+
+/* ========== MID style START ========== */
+.mid {
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7.6rem 0 8rem 0;
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.169);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.mid .slider {
+  position: relative;
+  background-color: red;
+  margin-bottom: 6rem;
+}
+
+.mid .slider .line {
+  position: absolute;
+  top: 120px;
+  left: -160px;
+  border-radius: 50%;
+  transform: rotate(-70deg);
+}
+.curve{
+  position: absolute;
+  left: -150px;
+  top: 20px;
+  width: 300px; 
+  height: 80px;  
+  border: solid 2px #fff;
+  border-color: #fff transparent transparent transparent;
+  border-radius: 55%/100px 100px 0 0;
+}
+.mid .slider .line .route .circle {
+  background-color: #F9CF4E;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transform-origin: center 170px;
+}
+
+.circle {
+  transform: rotate(8deg);
+}
+
+.mid .day-time {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.mid .day-time div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.mid .daily-info {
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 1rem;
+
+}
+
+.mid .daily-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #b1b1b1;
+  gap: 2px;
+
+}
+
+.mid .daily-info div span {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+/* ====X===== MID style END =====X====== */
+
+
+/* ========== BOTTOM style START ========== */
+.bottom {
+  width: 100%;
+}
+
+.bottom .weeks {
+  justify-content: space-around;
+  padding: 0 1.2rem;
+  gap: 5px;
+}
+
+.bottom .weeks .day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.bottom .weeks .day p {
+  font-size: 1.2rem;
+}
+
+.bottom .weeks .day .degree {
+  font-size: 1.4rem;
+}
+
+.bottom .weeks .day span {
+  font-size: 2rem;
+  padding-top: 2px;
+}
+
+/* ====X===== BOTTOM style END =====X====== */
+
+/* ===== media queries ===== */
+
+@media only screen and (max-width: 610px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .card {
+    width: 90%;
+  }
+
+  .top .current {
+    gap: 0px;
+  }
+
+  .top .current .degree {
+    font-size: 5.5rem;
+  }
+
+  .top .current .degree span {
+    font-size: 1.3rem;
+  }
+
+  .top .current .currentIcon {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .top .current .currentIcon img {
+    width: 90px;
+  }
+
+  .top .current .currentIcon p {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mid .daily-info div {
+    font-size: 1rem;
+  }
+
+  .mid .daily-info div span {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+}
+
+
+.sliderItem {
+  margin-top: 1rem;
+  width: 200px;
+  height: 50px;
+}
